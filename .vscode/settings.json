@@ -1,0 +1,5 @@
+{
+    "chat.agent.maxRequests": 5,
+    "augment.completions.enableAutomaticCompletions": false,
+    "augment.completions.enableQuickSuggestions": false
+}
