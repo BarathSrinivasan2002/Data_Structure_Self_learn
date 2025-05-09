@@ -128,10 +128,23 @@ class DoublyLinkedList:
         
         self.length -= 1
         return temp
+    
+    def is_palindrome(self):
+        if (self.length == 1 or self.length == 0):
+            return True
+        if (self.head.value != self.tail.value):
+            return False
+        if (self.head.value == self.tail.value):
+            self.head = self.head.next
+            self.length -=1
+            self.tail = self.tail.prev
+            return self.is_palindrome()
+            
 
 dll = DoublyLinkedList(1)
 dll.append(3)
-dll.insert(1,2)
-# dll.print_list()
-dll.remove(1)
+dll.append(4)
+dll.append(3)
+dll.append(1)
 dll.print_list()
+print(dll.is_palindrome())
